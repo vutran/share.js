@@ -72,7 +72,6 @@ var share = (function(x, $) {
    * @param string opts.desc
    */
   var _getShareUrl = function(opts) {
-    console.log(opts);
     $.each(_endpoint, function(network, el) {
       if(network === opts.network) {
         var url = el.url;
@@ -119,7 +118,6 @@ var share = (function(x, $) {
     s.async = true;
     s.src = file;
     h.appendChild(s);
-    console.log(s);
   };
 
   /**
