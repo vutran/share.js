@@ -1,7 +1,11 @@
 /**
- * Share
+ * Share.js
  *
+ * @copyright Copyright (c) 2013 Vu Tran
  * @version 1.0.0
+ * @link https://github.com/vutran/js-caching
+ * @author Vu Tran <vu@vu-tran.com>
+ * @website http://vu-tran.com/
  *
  * #Usage Example
  *
