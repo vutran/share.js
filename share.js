@@ -80,7 +80,7 @@ var share = (function(x, $) {
       if(network === opts.network) {
         var url = el.url;
 
-        if(typeof opts.url !== 'undefined') { url = url.replace('{URL}', opts.url); }
+        if(typeof opts.url !== 'undefined') { url = url.replace('{URL}', encodeURIComponent(opts.url)); }
         else { url = url.replace('{URL}', ''); }
 
         if(typeof opts.text !== 'undefined') { url = url.replace('{TEXT}', encodeURIComponent(opts.text)); }
