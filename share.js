@@ -7,6 +7,17 @@
  * @author Vu Tran <vu@vu-tran.com>
  * @website http://vu-tran.com/
  *
+ * # Available Sharing Options
+ * * Email
+ * * Facebook
+ * * Google+
+ * * Pinterest
+ * * Tumblr
+ * * Twitter
+ * * Reddit
+ * * LinkedIn
+ * * Pinterest
+ *
  * #Usage Example
  *
  * ## Facebook
@@ -39,6 +50,18 @@ var share = (function(x, $) {
     },
     twitter : {
       url : 'https://twitter.com/intent/tweet?url={URL}&text={TEXT}'
+    },
+    reddit : {
+      url : 'http://reddit.com/submit?url={URL}&text={TEXT}'
+    },
+    linkedin : {
+      url : 'http://www.linkedin.com/cws/share?url={URL}'
+    },
+    pinterest : {
+      url : 'http://pinterest.com/pin/create/button/?url={URL}&description={DESC}'
+    },
+    tumblr: {
+      
     }
   };
 

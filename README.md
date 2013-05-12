@@ -3,7 +3,18 @@ share.js
 
 Share you website on multiple third-party social networks.
 
-#Usage Example
+# Available Sharing Options
+* Email
+* Facebook
+* Google+
+* Pinterest
+* Tumblr
+* Twitter
+* Reddit
+* LinkedIn
+* Pinterest
+
+# Usage Example
 
 ## Facebook
     <a href="http://website-to-share.com/" data-network="facebook">Share on Facebook!</a>
