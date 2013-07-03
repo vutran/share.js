@@ -3,7 +3,7 @@
  *
  * @copyright Copyright (c) 2013 Vu Tran
  * @version 1.0.1
- * @link https://github.com/vutran/js-caching
+ * @link https://github.com/vutran/share.js
  * @author Vu Tran <vu@vu-tran.com>
  * @website http://vu-tran.com/
  *
