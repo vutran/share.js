@@ -12,12 +12,17 @@ Share you website on multiple third-party social networks.
 * Twitter
 * Reddit
 * LinkedIn
-* Pinterest
+* MySpace
 
-# Usage Example
+#Usage Example
 
 ## Facebook
-    <a href="http://website-to-share.com/" data-network="facebook">Share on Facebook!</a>
+```
+<a class="share-toggle" href="http://website-to-share.com/" data-network="facebook">Share on Facebook!</a>
+```
 
 ## Twitter
-    <a href="http://website-to-share.com/" data-network="twitter" data-text="Check this website out!">Share on Twitter!</a>
+
+```
+<a class="share-toggle" href="http://website-to-share.com/" data-network="twitter" data-text="Check this website out!">Share on Twitter!</a>
+```

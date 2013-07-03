@@ -2,10 +2,12 @@
  * Share.js
  *
  * @copyright Copyright (c) 2013 Vu Tran
- * @version 1.0.0
+ * @version 1.0.1
  * @link https://github.com/vutran/js-caching
  * @author Vu Tran <vu@vu-tran.com>
  * @website http://vu-tran.com/
+ *
+ * Share you website on multiple third-party social networks.
  *
  * # Available Sharing Options
  * * Email
@@ -16,15 +18,15 @@
  * * Twitter
  * * Reddit
  * * LinkedIn
- * * Pinterest
+ * * MySpace
  *
  * #Usage Example
  *
  * ## Facebook
- * <a href="http://website-to-share.com/" data-network="facebook">Share on Facebook!</a>
+ * <a class="share-toggle" href="http://website-to-share.com/" data-network="facebook">Share on Facebook!</a>
  *
  * ## Twitter
- * <a href="http://website-to-share.com/" data-network="twitter" data-text="Check this website out!">Share on Twitter!</a>
+ * <a class="share-toggle" href="http://website-to-share.com/" data-network="twitter" data-text="Check this website out!">Share on Twitter!</a>
  */
 
 var share = (function(x, $) {
@@ -34,7 +36,7 @@ var share = (function(x, $) {
    */
   var _endpoint = {
     email : {
-      url : 'mailto:?subject={TEXT}'
+      url : 'mailto:?subject={TEXT}&body={DESC}%20{URL}'
     },
     facebook : {
       url : 'http://www.facebook.com/share.php?u={URL}'
@@ -57,11 +59,8 @@ var share = (function(x, $) {
     linkedin : {
       url : 'http://www.linkedin.com/cws/share?url={URL}'
     },
-    pinterest : {
-      url : 'http://pinterest.com/pin/create/button/?url={URL}&description={DESC}'
-    },
-    tumblr: {
-      
+    myspace : {
+      url : 'http://www.myspace.com/index.cfm?fuseaction=postto&t={TEXT}&c={DESC}&u={URL}'
     }
   };
 
