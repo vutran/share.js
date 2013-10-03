@@ -1,0 +1,23 @@
+{
+  "name": "share.js",
+  "description": "Share on Social Networks",
+  "homepage": "https://github.com/vutran/share.js/",
+  "keywords": [
+    "share",
+    "social",
+    "facebook",
+    "twitter",
+    "googleplus",
+    "email",
+    "tumblr"
+  ],
+  "author": "Vu Tran <vu@vu-tran.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vutran/share.js.git"
+  },
+  "main": "share.js",
+  "version": "1.0.2",
+  "readmeFilename": "README.md",
+  "license": "BSD"
+}

@@ -2,7 +2,7 @@
  * Share.js
  *
  * @copyright Copyright (c) 2013 Vu Tran
- * @version 1.0.1
+ * @version 1.0.2
  * @link https://github.com/vutran/share.js
  * @author Vu Tran <vu@vu-tran.com>
  * @website http://vu-tran.com/
@@ -163,6 +163,13 @@ var share = (function(x, $) {
 
   $(_onDocumentReady);
 
+  // Export Module
+  if(typeof module !== "undefined" && module.exports) { module.exports = x; }
+
+  // Export AMD
+  if(typeof define === "function" && define.amd) { define(x); }
+
+  // Return The Objec
   return x;
 
 }(share || {}, jQuery));
