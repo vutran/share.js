@@ -2,31 +2,10 @@
  * Share.js
  *
  * @copyright Copyright (c) 2013 Vu Tran
- * @version 1.0.2
+ * @version 1.0.3
  * @link https://github.com/vutran/share.js
  * @author Vu Tran <vu@vu-tran.com>
  * @website http://vu-tran.com/
- *
- * Share you website on multiple third-party social networks.
- *
- * # Available Sharing Options
- * * Email
- * * Facebook
- * * Google+
- * * Pinterest
- * * Tumblr
- * * Twitter
- * * Reddit
- * * LinkedIn
- * * MySpace
- *
- * #Usage Example
- *
- * ## Facebook
- * <a class="share-toggle" href="http://website-to-share.com/" data-network="facebook">Share on Facebook!</a>
- *
- * ## Twitter
- * <a class="share-toggle" href="http://website-to-share.com/" data-network="twitter" data-text="Check this website out!">Share on Twitter!</a>
  */
 
 var share = (function(x, $) {
@@ -45,7 +24,7 @@ var share = (function(x, $) {
       url : 'https://plusone.google.com/_/+1/confirm?hl=en&url={URL}'
     },
     pinterest : {
-      url: 'http://pinterest.com/pin/create/button/?url={URL}&description={DESC}'
+      url: 'http://pinterest.com/pin/create/button/?url={URL}&description={DESC}&media={IMAGE}'
     },
     tumblr : {
       url : 'http://www.tumblr.com/share?v=3&u={URL}'
@@ -81,7 +60,8 @@ var share = (function(x, $) {
         network : theAnchor.data('network'),
         url : theAnchor.attr('href'),
         text : theAnchor.data('text'),
-        desc : theAnchor.data('desc')
+        desc : theAnchor.data('desc'),
+        image : theAnchor.data('image')
       };
       var url = _getShareUrl(opts);
     }
@@ -110,6 +90,9 @@ var share = (function(x, $) {
 
         if(typeof opts.desc !== 'undefined') { url = url.replace('{DESC}', encodeURIComponent(opts.desc)); }
         else { url = url.replace('{DESC}', '');  }
+
+        if(typeof opts.image !== 'undefined') { url = url.replace('{IMAGE}', encodeURIComponent(opts.image)); }
+        else { url = url.replace('{IMAGE}', '');  }
 
         // Open the popup
         _popup(url);
