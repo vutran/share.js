@@ -55,15 +55,19 @@ var share = (function(x, $) {
      */
     onClickShareToggle : function(e) {
       e.preventDefault();
-      var theAnchor = $(this);
-      var opts = {
-        network : theAnchor.data('network'),
-        url : theAnchor.attr('href'),
-        text : theAnchor.data('text'),
-        desc : theAnchor.data('desc'),
-        image : theAnchor.data('image')
-      };
-      var url = _getShareUrl(opts);
+      var
+        theAnchor   = $(this),
+        opts        = {
+          network   : theAnchor.data('network'),
+          url       : theAnchor.attr('href'),
+          text      : theAnchor.data('text'),
+          desc      : theAnchor.data('desc'),
+          image     : theAnchor.data('image')
+        },
+        url         = _getShareUrl(opts);
+
+        // Open the popup
+        _popup(url);
     }
   };
 
@@ -76,11 +80,13 @@ var share = (function(x, $) {
    * @param string opts.url
    * @param string opts.text
    * @param string opts.desc
+   * @return string
    */
   var _getShareUrl = function(opts) {
+    var url = false;
     $.each(_endpoint, function(network, el) {
       if(network === opts.network) {
-        var url = el.url;
+        url = el.url;
 
         if(typeof opts.url !== 'undefined') { url = url.replace('{URL}', encodeURIComponent(opts.url)); }
         else { url = url.replace('{URL}', ''); }
@@ -93,12 +99,9 @@ var share = (function(x, $) {
 
         if(typeof opts.image !== 'undefined') { url = url.replace('{IMAGE}', encodeURIComponent(opts.image)); }
         else { url = url.replace('{IMAGE}', '');  }
-
-        // Open the popup
-        _popup(url);
-        return false;
       }
     });
+    return url;
   };
 
   /**
@@ -112,24 +115,6 @@ var share = (function(x, $) {
   };
 
   /**
-   * Asynchronously load a new JS file into the HTML head
-   *
-   * @access private
-   * @param string file
-   * @return void
-   */
-  var _loadJS = function(file) {
-    var d = document;
-    var h = d.getElementsByTagName('head')[0];
-    var s = d.createElement('script');
-    s.type = 'text/javascript';
-    s.language = 'javascript';
-    s.async = true;
-    s.src = file;
-    h.appendChild(s);
-  };
-
-  /**
    * Handles the popup dialog box
    *
    * @access private
@@ -137,22 +122,23 @@ var share = (function(x, $) {
    * @return void
    */
   var _popup = function(url) {
-    var width = 600;
-    var height = 500;
-    var left = (screen.width) ? (screen.width - width) / 2 : 0;
-    var top = (screen.height) ? (screen.height - height) / 2 : 0;
+    var
+      width     = 600;
+      height    = 500;
+      left      = (screen.width) ? (screen.width - width) / 2 : 0;
+      top       = (screen.height) ? (screen.height - height) / 2 : 0;
     window.open(url, '_blank', 'height=' + height + ',width=' + width + ',left=' + left + ',top=' + top + ',location=0,menubar=0,resizable=0,scrollbars=0,status=0,titlebar=0,toolbar=0');
   };
 
   $(_onDocumentReady);
 
-  // Export Module
+  // Export as Node module
   if(typeof module !== "undefined" && module.exports) { module.exports = x; }
 
-  // Export AMD
+  // Export as AMD module
   if(typeof define === "function" && define.amd) { define(x); }
 
-  // Return The Objec
+  // Return The Object
   return x;
 
 }(share || {}, jQuery));
