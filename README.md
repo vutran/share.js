@@ -26,3 +26,9 @@ Share you website on multiple third-party social networks.
 ```
 <a class="share-toggle" href="http://website-to-share.com/" data-network="twitter" data-text="Check this website out!">Share on Twitter!</a>
 ```
+
+## Pinterest
+
+```
+<a class="share-toggle" href="http://website-to-share.com/" data-network="pinterest" data-text="Check this website out!" data-image="http://website-to-share.com/images/sample.png">Share on Pinterest!</a>
+```

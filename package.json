@@ -17,7 +17,7 @@
     "url": "git://github.com/vutran/share.js.git"
   },
   "main": "Gruntfile.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "readmeFilename": "README.md",
   "license": "BSD",
   "devDependencies": {

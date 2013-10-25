@@ -2,7 +2,7 @@
  * Share.js
  *
  * @copyright Copyright (c) 2013 Vu Tran
- * @version 1.0.3
+ * @version 1.0.4
  * @link https://github.com/vutran/share.js
  * @author Vu Tran <vu@vu-tran.com>
  * @website http://vu-tran.com/
