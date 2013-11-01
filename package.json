@@ -5,11 +5,16 @@
   "keywords": [
     "share",
     "social",
-    "facebook",
-    "twitter",
-    "googleplus",
     "email",
-    "tumblr"
+    "facebook",
+    "googleplus",
+    "google+",
+    "pinterest",
+    "tumblr",
+    "twitter",
+    "reddit",
+    "linkedin",
+    "myspace"
   ],
   "author": "Vu Tran <vu@vu-tran.com>",
   "repository": {
@@ -19,7 +24,7 @@
   "main": "Gruntfile.js",
   "version": "1.0.4",
   "readmeFilename": "README.md",
-  "license": "BSD",
+  "license": "MIT",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-uglify": "~0.2.4"
