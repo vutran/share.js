@@ -21,7 +21,7 @@ var share = (function(x, $) {
       url : 'http://www.facebook.com/share.php?u={URL}'
     },
     googleplus : {
-      url : 'https://plusone.google.com/_/+1/confirm?hl=en&url={URL}'
+      url : 'https://plus.google.com/share?url={URL}'
     },
     pinterest : {
       url: 'http://pinterest.com/pin/create/button/?url={URL}&description={DESC}&media={IMAGE}'
@@ -36,7 +36,7 @@ var share = (function(x, $) {
       url : 'http://reddit.com/submit?url={URL}&text={TEXT}'
     },
     linkedin : {
-      url : 'http://www.linkedin.com/cws/share?url={URL}'
+      url : 'http://www.linkedin.com/cws/share?url={URL}&summary={DESC}'
     },
     myspace : {
       url : 'http://www.myspace.com/index.cfm?fuseaction=postto&t={TEXT}&c={DESC}&u={URL}'
