@@ -1,8 +1,17 @@
 {
     "name" : "share.js",
-    "version" : "1.0.5",
+    "version" : "1.0.6",
     "main" : "build/share.min.js",
     "dependencies": {
         "jquery" : "~2.1.1"
-    }
+    },
+    "ignore" : [
+        "build/",
+        "node_modules/",
+        "src/",
+        "Gruntfile.js",
+        "LICENSE",
+        "package.json",
+        "README.md"
+    ]
 }
