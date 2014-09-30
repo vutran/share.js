@@ -51,3 +51,15 @@ For some social networks such as Facebook, you may have to use [Open Graph](http
 ```
 <a class="share-toggle" href="http://website-to-share.com/" data-network="pinterest" data-text="Check this website out!" data-image="http://website-to-share.com/images/sample.png">Share on Pinterest!</a>
 ```
+
+# Build with Grunt
+
+To build, run `grunt`
+
+# Change Log
+
+## 1.0.5
+- Added `bower.json`
+- Updated `package.json`
+- Updated package version: `grunt` and `grunt-contrib-uglify`
+- Recompiled the build
