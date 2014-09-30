@@ -3,7 +3,7 @@
   "description": "Share on Social Networks",
   "homepage": "https://github.com/vutran/share.js/",
   "author": "Vu Tran <vu@vu-tran.com>",
-  "version": "1.0.6",
+  "version": "1.0.5",
   "main": "build/share.min.js",
   "readmeFilename": "README.md",
   "license": "MIT",
