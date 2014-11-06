@@ -123,9 +123,9 @@ var share = (function(x, $) {
    */
   var _popup = function(url) {
     var
-      width     = 600;
-      height    = 500;
-      left      = (screen.width) ? (screen.width - width) / 2 : 0;
+      width     = 600,
+      height    = 500,
+      left      = (screen.width) ? (screen.width - width) / 2 : 0,
       top       = (screen.height) ? (screen.height - height) / 2 : 0;
     window.open(url, '_blank', 'height=' + height + ',width=' + width + ',left=' + left + ',top=' + top + ',location=0,menubar=0,resizable=0,scrollbars=0,status=0,titlebar=0,toolbar=0');
   };
