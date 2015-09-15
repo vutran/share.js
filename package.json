@@ -3,7 +3,7 @@
   "description": "Share on Social Networks",
   "homepage": "https://github.com/vutran/share.js/",
   "author": "Vu Tran <vu@vu-tran.com>",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "main": "build/share.min.js",
   "readmeFilename": "README.md",
   "license": "MIT",
@@ -26,7 +26,18 @@
     "url": "git://github.com/vutran/share.js.git"
   },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-uglify": "~0.6.0"
+    "babel-core": "^5.8.24",
+    "babel-eslint": "^4.1.2",
+    "babel-loader": "^5.3.2",
+    "html-loader": "^0.3.0",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "dependencies": {
+    "react": "^0.13.3"
+  },
+  "scripts": {
+    "start": "webpack-dev-server"
   }
 }
